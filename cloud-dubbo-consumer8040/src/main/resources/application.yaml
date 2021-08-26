@@ -1,0 +1,40 @@
+server:
+  port: 8040
+
+spring:
+  application:
+    name: dubbo-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://localhost:8848
+  main:
+    allow-bean-definition-overriding: true
+# Dubbo服务配置
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://localhost
+  cloud:
+    subscribed-services: dubbo-consumer
+
+#server:
+#  port: 8040
+#dubbo:
+#  application:
+#    name: dubbo-consumer
+#  registry:
+#    address: nacos://localhost:8848
+#    check: false
+#  monitor:
+#    protocol: register
+#  consumer:
+#    check: false
+#    timeout: 3000
+#
+#spring:
+#  main:
+#    # 解决Bean重复定义问题
+#    allow-bean-definition-overriding: true

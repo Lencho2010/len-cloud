@@ -1,0 +1,22 @@
+server:
+  port: 8050
+
+# Dubbo服务配置
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://localhost
+  cloud:
+    subscribed-services: dubbo-consumer
+
+spring:
+  application:
+    name: dubbo-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://localhost:8848
+  main:
+    allow-bean-definition-overriding: true

@@ -1,0 +1,20 @@
+package com.lencho.cloud;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+
+/**
+ * @author Lencho
+ * @create 2021-08-26 20:29
+ * @desc
+ */
+@SpringBootApplication
+@EnableFeignClients
+//@EnableDiscoveryClient
+public class OrderFeignMain80 {
+    public static void main(String[] args) {
+        SpringApplication.run(OrderFeignMain80.class, args);
+    }
+}

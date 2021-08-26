@@ -1,0 +1,22 @@
+server:
+  port: 8022
+
+dubbo:
+  scan:
+    base-packages: com.lencho.cloud.service
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://localhost
+  cloud:
+    subscribed-services: dubbo-cloud-provider
+spring:
+  application:
+    name: dubbo-cloud-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  main:
+    allow-bean-definition-overriding: true
