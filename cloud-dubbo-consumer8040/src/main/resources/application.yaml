@@ -7,7 +7,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: http://localhost:8848
+        server-addr: 192.168.10.1:8848
   main:
     allow-bean-definition-overriding: true
 # Dubbo服务配置
@@ -18,7 +18,7 @@ dubbo:
   registry:
     address: spring-cloud://localhost
   cloud:
-    subscribed-services: dubbo-consumer
+    subscribed-services: dubbo-cloud-provider
 
 #server:
 #  port: 8040

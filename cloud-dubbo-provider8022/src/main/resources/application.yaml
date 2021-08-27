@@ -9,14 +9,14 @@ dubbo:
     port: -1
   registry:
     address: spring-cloud://localhost
-  cloud:
-    subscribed-services: dubbo-cloud-provider
+#  cloud:
+#    subscribed-services: dubbo-cloud-provider
 spring:
   application:
     name: dubbo-cloud-provider
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: 192.168.10.1:8848
   main:
     allow-bean-definition-overriding: true
