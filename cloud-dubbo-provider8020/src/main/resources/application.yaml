@@ -20,25 +20,3 @@ spring:
         server-addr: 192.168.10.1:8848
   main:
     allow-bean-definition-overriding: true
-
-#server:
-#  port: 8020
-#
-#dubbo:
-#  application:
-#    name: dubbo-provider
-#  registry:
-#    address: nacos://127.0.0.1:8848
-##    id: nacos_service
-#  protocol:
-#    name: dubbo
-#    port: 20880
-#  monitor:
-#    protocol: register
-#  consumer:
-#    check: false
-#    timeout: 3000
-#spring:
-#  main:
-#    # 解决Bean重复定义问题
-#    allow-bean-definition-overriding: true
